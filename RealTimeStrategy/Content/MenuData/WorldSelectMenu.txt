@@ -1,0 +1,3 @@
+﻿Name:WorldSelectMenu
+GrassLandsButton:810,440
+BackButton:810,840

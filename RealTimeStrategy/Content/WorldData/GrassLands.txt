@@ -1,0 +1,5 @@
+﻿Name:GrassLands
+ChunkR:200
+ChunkC:200
+ChunkSize:25
+Texture:Grass

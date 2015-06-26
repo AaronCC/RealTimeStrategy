@@ -1,0 +1,3 @@
+﻿Name:MainMenu
+PlayButton:810,440
+OptionsButton:810,640
