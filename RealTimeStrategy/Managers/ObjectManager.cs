@@ -114,14 +114,20 @@ namespace RealTimeStrategy.Managers
             if (menuStack.Count > 0)
                 menuStack.Peek().Update();
         }
-        public void UpdateGame()
+        public void UpdateGame(GameTime gameTime)
         {
+            List<Elements.Objects.GameObject> updated = new List<Elements.Objects.GameObject>();
             PLAYER.Update();
             Game1.CAM.Update();
             WORLD.Update();
-            while (objectUpdateStack.Count > 0)
+            int x;
+            for(x = objectUpdateStack.Count; x > 0; x--)
             {
-                objDict[objectUpdateStack.Pop()].Update();
+                //if (!updated.Contains(objDict[objectUpdateStack.Peek()]))
+                //{
+                    updated.Add(objDict[objectUpdateStack.Peek()]);
+                    objDict[objectUpdateStack.Pop()].Update(gameTime);
+                //}
             }
             HUD.Update();
         }

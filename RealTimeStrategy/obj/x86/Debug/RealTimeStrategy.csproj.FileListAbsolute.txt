@@ -29,3 +29,5 @@ C:\Users\Aaron\Desktop\CS Projects\RealTimeStrategy\RealTimeStrategy\bin\Windows
 C:\Users\Aaron\Desktop\CS Projects\RealTimeStrategy\RealTimeStrategy\bin\WindowsGL\Debug\Content\Textures\Villager.png
 C:\Users\Aaron\Desktop\CS Projects\RealTimeStrategy\RealTimeStrategy\bin\WindowsGL\Debug\Content\Textures\RedChunk.png
 C:\Users\Aaron\Desktop\CS Projects\RealTimeStrategy\RealTimeStrategy\bin\WindowsGL\Debug\Content\Textures\Tree.png
+C:\Users\Aaron\Desktop\CS Projects\RealTimeStrategy\RealTimeStrategy\bin\WindowsGL\Debug\Content\Textures\LoadBox.png
+C:\Users\Aaron\Desktop\CS Projects\RealTimeStrategy\RealTimeStrategy\bin\WindowsGL\Debug\Content\Textures\LoadBar.png

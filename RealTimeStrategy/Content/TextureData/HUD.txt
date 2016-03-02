@@ -2,3 +2,5 @@
 SelectOverlay:SelectBox.png_1,1,1
 TargetPoint:TargetPoint.png_1,1,1
 HUDOverlay:HUDOverlay.png_1,1,1
+LoadBox:LoadBox.png_1,1,1
+LoadBar:LoadBar.png_1,1,1

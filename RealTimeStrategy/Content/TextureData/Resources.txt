@@ -1,1 +1,1 @@
-﻿Tree:Tree.png_0,0,0
+﻿Tree:Tree.png_1,1,1

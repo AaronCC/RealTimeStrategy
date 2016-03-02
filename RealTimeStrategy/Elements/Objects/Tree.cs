@@ -17,7 +17,7 @@ namespace RealTimeStrategy.Elements.Objects
             : base(_name, _type, _position)
         {
             hotKeys = new List<Keys>();
-            target = new Vector2(_position.X, _position.Y);
+            target = new Point((int)_position.X, (int)_position.Y);
             selected = false;
             position = _position;
             type = _type;

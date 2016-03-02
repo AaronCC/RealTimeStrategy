@@ -55,7 +55,9 @@ namespace RealTimeStrategy.Elements
             {
                 CheckSelect();
                 if (selectedObjects.Count > 0 && mState.RightButton == ButtonState.Pressed && old_mState.RightButton == ButtonState.Released)
+                {
                     SelectAction();
+                }
                 Keys[] pressedKeys = kState.GetPressedKeys();
                 if (pressedKeys.Length > 0)
                 {
@@ -97,7 +99,6 @@ namespace RealTimeStrategy.Elements
                         obj.hitBox.Height);
                 spriteBatch.Draw(selectOverlay.sprite, posRect, Color.White * 0.5f);
             }
-
         }
         void DrawLine(SpriteBatch sb, Vector2 start, Vector2 end)
         {
@@ -169,9 +170,10 @@ namespace RealTimeStrategy.Elements
         }
         public void SelectObjects(Rectangle selection)
         {
+
+            selectedObjects = new List<Objects.GameObject>();
             foreach (Objects.GameObject obj in selectedObjects)
                 obj.selected = false;
-            selectedObjects = new List<Objects.GameObject>();
             selectedObjects =
                 Game1.OBM.GetWorld().Query
                 (Game1.OBM.CalcChunkIndex(new Point(selection.X + (int)Game1.CAM.offset.X,

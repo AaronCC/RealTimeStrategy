@@ -21,6 +21,5 @@ namespace RealTimeStrategy.Elements.Menus
             name = n;
             texture = Game1.ASM.GetTextureAsset(name);
         }
-
     }
 }

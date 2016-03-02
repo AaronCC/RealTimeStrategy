@@ -44,7 +44,7 @@ namespace RealTimeStrategy.Elements.Worlds
             }
             while (updateQueue.Count > 0)
             {
-                Game1.OBM.PushUpdate(updateQueue.Dequeue().name);
+                updateQueue.Dequeue().PushUpdate();
             }
         }
         public override void Generate()
@@ -54,14 +54,13 @@ namespace RealTimeStrategy.Elements.Worlds
             Rectangle visible = new Rectangle(((chunkC * chunkSize) / 2) - (1920 / 2), ((chunkR * chunkSize) / 2) - (1080 / 2), 1920, 1080);
             objPos = new Vector2((visible.X + (visible.Width / 2)) - 50,
                (visible.Y + (visible.Height / 2)) - 50);
-            Game1.OBM.AddObject("Structure", new Objects.TownCenter("TownCenter", "Structure",
-               objPos));
-            noise = GeneratePerlinNoise(GenerateWhiteNoise(chunkC, chunkR), 5);
+            Game1.OBM.AddObject("Structure", new Objects.TownCenter("TownCenter", "Structure",objPos));
+            noise = GeneratePerlinNoise(GenerateWhiteNoise(chunkC, chunkR), 6);
             for (int i = 0; i < chunkC; i++)
             {
                 for (int j = 0; j < chunkR; j++)
                 {
-                    if (noise[i, j] > 0.6)
+                    if (noise[i, j] > 0.75)
                     {
                         if (chunkMap[i, j].objects.Count == 0)
                             Game1.OBM.AddObject("Resource", new Elements.Objects.Tree("Tree", "Resource", new Vector2(i * chunkSize, j * chunkSize)));

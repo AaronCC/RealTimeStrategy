@@ -44,12 +44,18 @@
     <Compile Include="Elements\Chunk.cs" />
     <Compile Include="Elements\HUD\HeadsUpDisplay.cs" />
     <Compile Include="Elements\HUD\MiniMap.cs" />
+    <Compile Include="Elements\Intelligence\Brain.cs" />
+    <Compile Include="Elements\Intelligence\PathGraph.cs" />
+    <Compile Include="Elements\Intelligence\Node.cs" />
+    <Compile Include="Elements\Intelligence\VillagerBrain.cs" />
     <Compile Include="Elements\Menus\GameMenu.cs" />
     <Compile Include="Elements\Menus\MainMenu.cs" />
     <Compile Include="Elements\Menus\OptionsMenu.cs" />
     <Compile Include="Elements\Menus\WorldSelectMenu.cs" />
+    <Compile Include="Elements\Objects\Structure.cs" />
     <Compile Include="Elements\Objects\TownCenter.cs" />
     <Compile Include="Elements\Objects\Tree.cs" />
+    <Compile Include="Elements\Objects\Unit.cs" />
     <Compile Include="Elements\Objects\Villager.cs" />
     <Compile Include="Elements\Player.cs" />
     <Compile Include="Elements\Worlds\GrassLands.cs" />
@@ -115,6 +121,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Content\Textures\HUDOverlay.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Textures\LoadBar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Textures\LoadBox.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Content\Textures\PlayButton.png">

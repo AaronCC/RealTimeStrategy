@@ -117,7 +117,8 @@ namespace RealTimeStrategy.Elements.Worlds
 
         public List<Objects.GameObject> Query(Point index, Rectangle hitBox)
         {
-            List<Objects.GameObject> querryObjects = new List<Objects.GameObject>();
+            List<Objects.GameObject> queryObjects;
+            queryObjects = new List<Objects.GameObject>();
             Point endIndex = index;
             endIndex.X += hitBox.Width / 25;
             endIndex.Y += hitBox.Height / 25;
@@ -125,20 +126,21 @@ namespace RealTimeStrategy.Elements.Worlds
             {
                 for (int y = index.Y; y <= endIndex.Y; y++)
                 {
+                    
                     foreach (Objects.GameObject obj in chunkMap[x, y].objects)
                     {
-                        if (!querryObjects.Contains(obj) && hitBox.Intersects
+                        if (!queryObjects.Contains(obj) && hitBox.Intersects
                             (new Rectangle((int)(obj.hitBox.X - Game1.CAM.offset.X), (int)(obj.hitBox.Y - Game1.CAM.offset.Y),obj.hitBox.Width,
                                 obj.hitBox.Height)))
-                            querryObjects.Add(obj);
+                            queryObjects.Add(obj);
                     }
                 }
             }
-            return querryObjects;
+            return queryObjects;
         }
         public virtual void Generate()
         {
-            noise = GeneratePerlinNoise(GenerateWhiteNoise(200, 200), 5);
+            noise = GeneratePerlinNoise(GenerateWhiteNoise(200, 200), 4);
         }
         public void Draw(SpriteBatch spriteBatch)
         {
@@ -153,6 +155,7 @@ namespace RealTimeStrategy.Elements.Worlds
                 {
                     if ((row < chunkR && col < chunkC) && (row >= 0 && col >= 0))
                         chunkMap[row, col].Draw(spriteBatch);
+
                 }
             }
         }
@@ -161,7 +164,7 @@ namespace RealTimeStrategy.Elements.Worlds
         {
             int width = baseNoise.GetLength(0);
             int height = baseNoise.GetLength(1);
-
+            
             double[][,] smoothNoise = new double[octaveCount][,];
 
             double persistance = 0.5;

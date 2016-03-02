@@ -77,8 +77,7 @@ namespace RealTimeStrategy
         protected override void LoadContent()
         {
             lineTexture = new Texture2D(GraphicsDevice, 1, 1);
-            lineTexture.SetData<Color>(
-                new Color[] { Color.Black * .6f});
+            lineTexture.SetData<Color>(new Color[] { Color.Black * .6f });
             Texture2D tempTexture;
             SoundEffect tempSound;
             string data;
@@ -160,7 +159,7 @@ namespace RealTimeStrategy
                     OBM.UpdateMenus();
                     break;
                 case 1:
-                    OBM.UpdateGame();
+                    OBM.UpdateGame(gameTime);
                     break;
                 case 2:
                     break;

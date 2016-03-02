@@ -19,7 +19,6 @@ namespace RealTimeStrategy.Elements
         Elements.Assets.TextureAsset texture;
         Elements.Assets.TextureAsset occTexture;
         public int size;
-        int counted = 1;
         public Chunk(string textureName, Vector2 pos, int _size)
         {
             size = _size;
@@ -51,6 +50,7 @@ namespace RealTimeStrategy.Elements
                 Game1.OBM.PushDraw(obj.name);
             }
             //spriteBatch.DrawString(Game1.testFont, objects.Count.ToString(), new Vector2(drawRect.X, drawRect.Y), Color.White);
+            
         }
     }
 }
